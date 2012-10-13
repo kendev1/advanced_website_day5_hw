@@ -1,0 +1,150 @@
+
+    body {
+      font-family: 'Lucida Grande', Verdana, Arial;
+      font-size: 12px;
+    }
+
+    #container {
+      position: relative;
+      height: 300px;
+      width: 300px;
+//       width: 40%;
+      margin: 50px 100px;
+//      margin: 0 auto;
+      border: 2px solid blue;
+      -webkit-perspective: 600;
+    }
+
+    #parent {
+      margin: 10px;
+//      margin: 0 auto;
+      width: 280px;
+      height: 280px;
+//      width: 80%;
+      background-color: #844BCA;
+      opacity: 0.8;
+      -webkit-transform-style: preserve-3d;
+      -webkit-animation: spin 15s infinite linear;
+    }
+    
+    #container:hover #parent {
+      -webkit-transform-style: flat;
+    }
+    
+    @-webkit-keyframes spin {
+      from { -webkit-transform: rotateY(0); }
+      to   { -webkit-transform: rotateY(360deg); }
+    }
+    
+    #parent > div {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      width: 200px;
+      height: 200px;
+      padding: 10px;
+      -webkit-box-sizing: border-box;
+      font-family: monospace;
+      font-size: 12pt;
+    }
+
+    #parent > :first-child {
+      background-color: #49DC93;
+//      -webkit-transform: translateZ(-100px) rotateY(45deg);
+        -webkit-transform: translateZ(-100px) ;
+    }
+
+    #parent > :last-child {
+      background-color: #FF6;
+ //     -webkit-transform: translateZ(-20px) rotateY(40deg);
+ //      -webkit-transform-origin: 50% top;
+      
+ //      -webkit-transform-origin: 50% top;
+ //      -webkit-transform: translateZ(100px) translateX(0px) rotateY(48deg);
+         -webkit-transform: translateZ(100px);
+    }
+
+table { 
+	width: 100%; 
+	border-collapse: collapse; 
+}
+/* Alternate striping of td (columns) */
+/* tr:nth-of-type(odd) { 
+	background: #eee; 
+}   */
+
+td:nth-of-type(odd) { 
+	background: #eee; 
+}
+
+th { 
+	background: #333; 
+	color: white; 
+	font-weight: bold; 
+}
+td, th { 
+	padding: 6px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+}
+
+tbody td:hover { background: #0FF; }
+
+/* 
+Max width.
+This query will take effect for any screen smaller than 760px
+
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables. Independent cell blocks*/
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Multiply 5 X 1"; }
+	td:nth-of-type(2):before { content: "Multiply 5 X 2"; }
+	td:nth-of-type(3):before { content: "Multiply 5 X 3"; }
+	td:nth-of-type(4):before { content: "Multiply 5 X 4"; }
+	td:nth-of-type(5):before { content: "Multiply 5 X 5"; }
+	td:nth-of-type(6):before { content: "Multiply 5 X 6"; }
+	td:nth-of-type(7):before { content: "Multiply 5 X 7"; }
+	td:nth-of-type(8):before { content: "Multiply 5 X 8"; }
+	td:nth-of-type(9):before { content: "Multiply 5 X 9"; }
+	td:nth-of-type(10):before{ content: "Multiply 5 X 10"; }
+}
+
+
