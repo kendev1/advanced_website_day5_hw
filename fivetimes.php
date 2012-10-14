@@ -6,7 +6,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>5 Times Table</title>
-<link rel="stylesheet" href="{stylesheet="css/fivetimes.css"}" type="text/css" media="screen">
+<link rel="stylesheet" href="css/fivetimes.css" type="text/css" media="screen">
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 
 <script type="text/javascript" src="js/fivetimes.js"></script>
